@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     type: 'website',
     title: 'vedasach – Wellness, Ayurveda & Dream Meanings',
     description: "India's #1 wellness platform. Healthy Mind • Healthy Body • Positive Life.",
-    url: 'https://vedasach.in',
+    url: 'https://vedasach.com',
     images: [{ url: '/logo.svg', width: 180, height: 48, alt: 'vedasach Logo' }],
   },
 };
