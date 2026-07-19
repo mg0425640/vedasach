@@ -1,0 +1,12 @@
+{
+  "name": "VedaWell",
+  "short_name": "VedaWell",
+  "description": "India's trusted wellness platform covering dream meanings, Ayurveda, yoga, home remedies, beauty, nutrition, and spirituality.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#E84E1B",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

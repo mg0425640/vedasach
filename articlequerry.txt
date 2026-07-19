@@ -1,0 +1,249 @@
+
+
+DELETE FROM articles WHERE category = 'dreams';
+
+INSERT INTO articles (
+    slug,
+    title,
+    title_hi,
+    excerpt,
+    excerpt_hi,
+    content,
+    content_hi,
+    category,
+    subcategory,
+    subcategory_hi,
+    image_url,
+    author,
+    author_image,
+    published_at,
+    read_time,
+    tags,
+    featured,
+    trending,
+    lucky_number,
+    lucky_color,
+    view_count,
+    created_at,
+    meta_title,
+    meta_description,
+    meta_keywords,
+    meta_title_hi,
+    meta_description_hi,
+    canonical_url,
+    og_image,
+    read_count,
+    like_count,
+    share_count,
+    is_published,
+    sections_en,
+    sections_hi
+)
+VALUES
+(
+'dream-about-wall-falling',
+'Dream About Wall Falling Meaning',
+'सपने में दीवार गिरना',
+'Dreaming of a wall falling often symbolizes major life changes, breaking barriers, unexpected events, emotional transformation, and new beginnings.',
+'सपने में दीवार गिरना जीवन में बड़े बदलाव, बाधाओं के टूटने, अचानक घटनाओं और नई शुरुआत का संकेत माना जाता है।',
+
+'Dreaming about a wall falling is one of the most symbolic dreams in many spiritual traditions. A wall usually represents protection, boundaries, stability, security, and the obstacles that separate different parts of life. When that wall collapses in a dream, it often indicates that something significant is changing. This change may be emotional, financial, spiritual, or related to relationships.
+
+The dream does not always indicate bad luck. In many traditional dream interpretations, a falling wall means that old limitations are ending and new opportunities are appearing. If the wall falls without harming anyone, it often represents freedom from stress, the removal of obstacles, and positive transformation.
+
+However, if the falling wall creates fear, injury, or destruction, it can serve as a warning to pay attention to family matters, financial planning, health, or personal relationships. The subconscious mind may be encouraging you to strengthen weak areas of your life before they become bigger problems.
+
+Spiritually, walls symbolize ego, emotional barriers, and fears. Their collapse may indicate spiritual awakening, letting go of the past, forgiveness, or accepting important life changes.
+
+Overall, this dream encourages patience, preparation, wisdom, and self-reflection. Instead of fearing change, consider it an opportunity for growth and personal development.',
+
+'सपने में दीवार गिरना एक अत्यंत प्रतीकात्मक सपना माना जाता है। दीवार सामान्यतः सुरक्षा, स्थिरता, सीमाओं, परिवार की रक्षा और जीवन की बाधाओं का प्रतीक होती है। जब यही दीवार सपने में गिरती हुई दिखाई देती है, तो यह संकेत देती है कि आपके जीवन में कोई बड़ा परिवर्तन आने वाला है।
+
+हर बार यह सपना अशुभ नहीं होता। यदि दीवार बिना किसी नुकसान के गिरती है, तो इसका अर्थ होता है कि आपके जीवन की पुरानी परेशानियां समाप्त हो सकती हैं, रुके हुए कार्य पूरे हो सकते हैं और नई शुरुआत का समय आ सकता है।
+
+यदि दीवार गिरने से डर, चोट, नुकसान या परिवार को हानि होती दिखाई दे, तो यह एक चेतावनी हो सकती है कि आपको अपने पारिवारिक संबंधों, आर्थिक स्थिति, स्वास्थ्य और भविष्य की योजनाओं पर अधिक ध्यान देने की आवश्यकता है।
+
+आध्यात्मिक दृष्टि से दीवार अहंकार, भय, मानसिक सीमाओं और पुराने विचारों का प्रतीक है। इसका गिरना इस बात का संकेत हो सकता है कि अब समय आ गया है कि आप पुराने डर को छोड़कर जीवन में आगे बढ़ें।
+
+यह सपना धैर्य, समझदारी, आत्मविश्वास और सकारात्मक सोच बनाए रखने की प्रेरणा देता है।',
+
+'dreams',
+'Buildings',
+'भवन एवं निर्माण',
+
+'https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1200&q=80',
+
+'VedaWell Team',
+NULL,
+NOW(),
+8,
+ARRAY[
+'wall dream',
+'falling wall',
+'dream meaning',
+'सपने में दीवार गिरना',
+'dream interpretation'
+],
+false,
+true,
+8,
+'Brown / भूरा',
+0,
+NOW(),
+
+'Dream About Wall Falling Meaning | Spiritual Dream Interpretation',
+'Discover the spiritual, psychological, and traditional meaning of dreaming about a wall falling. Learn career, love, health, wealth, and life predictions.',
+
+ARRAY[
+'dream wall',
+'wall falling dream',
+'dream interpretation',
+'spiritual dreams',
+'wall collapse meaning'
+],
+
+'सपने में दीवार गिरना का अर्थ | स्वप्न फल',
+'जानिए सपने में दीवार गिरने का धार्मिक, आध्यात्मिक और मनोवैज्ञानिक अर्थ।',
+
+'https://vedawell.com/dream-about-wall-falling',
+'https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1200&q=80',
+
+0,
+0,
+0,
+true,
+
+'{
+"meaning":"A wall represents protection, stability, personal boundaries, and security. Seeing a wall collapse often symbolizes major life changes. It may indicate that old barriers are disappearing and new opportunities are approaching. Spiritually, it can also represent breaking free from fear, emotional healing, and personal transformation. If the wall falls peacefully, the dream is generally considered positive. If it causes destruction or injury, it may be a warning to strengthen weak areas of your life before problems grow larger.",
+
+"positive":"The dream may indicate success after long struggles, removal of obstacles, emotional healing, better family relationships, financial improvement, spiritual growth, and freedom from negative influences. Many traditional dream interpreters believe this dream marks the beginning of a better chapter in life.",
+
+"negative":"If the wall crushes someone or creates fear, it may represent family disputes, financial instability, emotional stress, broken trust, or unexpected changes. It reminds you to remain prepared rather than fearful.",
+
+"career":"Career-wise, this dream suggests major organizational changes, new responsibilities, promotions, or career transitions. Those seeking jobs may receive unexpected opportunities.",
+
+"business":"Business owners may experience restructuring, expansion, or the need to replace outdated strategies. Careful planning will produce better long-term success.",
+
+"loveLife":"The dream encourages honest communication. Emotional barriers between partners may finally disappear, improving trust and understanding.",
+
+"marriage":"For married couples, it symbolizes rebuilding relationships through forgiveness, openness, and mutual respect.",
+
+"health":"Pay attention to stress, sleep quality, and emotional balance. Avoid ignoring small health concerns.",
+
+"money":"Financially, avoid risky investments. Focus on saving, budgeting, and building long-term stability.",
+
+"advice":"Accept change with confidence. Strengthen relationships, remain patient, and use challenges as opportunities for growth.",
+
+"precautions":"Avoid unnecessary arguments, impulsive financial decisions, and negative thinking. Keep your home and relationships emotionally strong.",
+
+"faqs":[
+{
+"q":"Is dreaming about a wall falling bad?",
+"a":"Not necessarily. The meaning depends on the emotions, surroundings, and outcome of the dream. Peaceful collapse often symbolizes positive transformation."
+},
+{
+"q":"Does this dream predict financial loss?",
+"a":"Generally no. It advises caution and better financial planning rather than predicting certain loss."
+},
+{
+"q":"What should I do after seeing this dream?",
+"a":"Reflect on your current life, strengthen family relationships, avoid impulsive decisions, and welcome positive change."
+}
+]
+}'::jsonb,
+
+'{
+"meaning":"दीवार सुरक्षा, स्थिरता और जीवन की सीमाओं का प्रतीक होती है। सपने में इसका गिरना बड़े जीवन परिवर्तन, पुरानी बाधाओं के समाप्त होने और नए अवसरों के आने का संकेत देता है। यदि दीवार बिना नुकसान के गिरती है तो इसे शुभ माना जाता है। यदि इससे नुकसान होता है तो यह सावधानी बरतने का संकेत हो सकता है।",
+
+"positive":"यह सपना रुके हुए कार्य पूरे होने, मानसिक शांति, पारिवारिक सुख, आर्थिक सुधार, आध्यात्मिक उन्नति और जीवन में नई शुरुआत का संकेत देता है।",
+
+"negative":"यदि दीवार गिरकर किसी को चोट पहुंचाती है तो यह पारिवारिक तनाव, आर्थिक अस्थिरता, मानसिक दबाव या अचानक आने वाली चुनौतियों की चेतावनी हो सकती है।",
+
+"career":"करियर में नई जिम्मेदारियां, पदोन्नति, नौकरी परिवर्तन या नए अवसर मिलने की संभावना बढ़ती है।",
+
+"business":"व्यापार में पुराने तरीकों को बदलकर नई रणनीति अपनाने का समय हो सकता है। धैर्य रखने से लाभ मिलेगा।",
+
+"loveLife":"रिश्तों में बनी दूरी समाप्त हो सकती है। खुलकर बातचीत करने से संबंध मजबूत होंगे।",
+
+"marriage":"वैवाहिक जीवन में आपसी समझ, क्षमा और विश्वास बढ़ने का संकेत मिलता है।",
+
+"health":"तनाव कम करें, पर्याप्त नींद लें और नियमित स्वास्थ्य जांच करवाएं।",
+
+"money":"बड़े निवेश सोच-समझकर करें। बचत बढ़ाने और भविष्य की योजना बनाने का समय है।",
+
+"advice":"परिवर्तन से डरें नहीं। सकारात्मक सोच रखें और हर परिस्थिति से सीखने का प्रयास करें।",
+
+"precautions":"अनावश्यक विवाद, जल्दबाजी में निवेश और नकारात्मक सोच से बचें।",
+
+"faqs":[
+{
+"q":"क्या सपने में दीवार गिरना अशुभ होता है?",
+"a":"हर बार नहीं। यदि नुकसान नहीं होता तो इसे शुभ परिवर्तन का संकेत माना जाता है।"
+},
+{
+"q":"क्या यह सपना धन हानि का संकेत देता है?",
+"a":"यह निश्चित धन हानि नहीं बताता बल्कि आर्थिक सावधानी बरतने की सलाह देता है।"
+},
+{
+"q":"इस सपने के बाद क्या करना चाहिए?",
+"a":"धैर्य रखें, परिवार के साथ संबंध मजबूत करें, सोच-समझकर निर्णय लें और सकारात्मक रहें।"
+}
+]
+}'::jsonb
+);
+
+give me in this format give me article about catagory dream subcategory=Animals=bull ko dekhna, snake ko dekhna. Nature-rain hona, flood aana, falling from mountain. Elements- burning in fire, foot burn and fall. People-fighting with some other guy, ghost in dreams, seeing god in dream. Objects- sapne me house buy karna, new car buy karna, gold buy karna. Situations- daldal me fasna, pani me dubna, jhatke se girna. fill all colums dont left blank 
+
+
+============================================================================================================
+Here is a detailed breakdown to help you understand exactly how this code works, which database tables it reads from, and how it decides where to show the advertisements.
+
+1. Which Database Tables Is It Picking From?
+This component reads from two completely separate tables in your Supabase database depending 
+on the configuration properties (props) passed to it.
+
+Table A: global_ads
+When is it used? When isGlobal={true} is configured on the component, or when the slot parameter 
+is exactly set to the string 'global'.
+
+What does it fetch? It looks for rows where is_active = true AND show_on_all_pages = true.
+
+Behavior: It sorts them by your custom order (sort_order) and limits the display to a 
+maximum of 2 ads stacked vertically.
+
+Table B: category_ads
+When is it used? This is the default path. It is used whenever isGlobal is false and the 
+slot is a standard name (like 'banner-1', 'rectangle', etc.).
+
+What does it fetch? It matches entries matching the layout slot (slot = slot) and rows that are 
+active (is_active = true).
+Targeting Logic: It checks the category you pass into the component. It maps that category into a column filter (e.g., passing category="health" makes it filter by the database column target_health = true). If no matching category row is found, it falls back to looking for rows marked target_all_categories = true.
+
+Behavior: It fetches a maximum of 1 ad.
+
+2. How Does It Decide Which Page (and Where on the Page) to Show the Ads?
+The location and targeting of an advertisement depend directly on the properties (slot and category) 
+you give to <AdBanner /> when placing it inside your page files (like your DreamsPage or HealthPage).
+
+A. Deciding the Position (Layout Size & Dimensions)
+The component automatically styles itself into two different display styles based on the name given to the slot string property:
+
+Sidebar Layout (isSidebar): If your slot name begins with the phrase "side-image" (e.g., slot="side-image-1"), the ad enforces a strict standard rectangle size box:
+
+Dimensions: Width of 300px and Height of 250px.
+
+Horizontal Banner Layout (isBanner): If your slot name begins with "banner" or is exactly "leaderboard" (e.g., slot="health-top" or slot="banner-1"), it enforces a wide responsive display:
+
+Dimensions: Width of 100% (fluid full layout) and a thin Height of 90px.
+
+B. Deciding Which Page It Belongs To (Context Filtering)
+When you add the component onto a page, you filter it by passing context. For example:
+
+On the Dreams Page: You pass category="dreams". The code dynamically converts this using its mapped keys array to check your database column target_dreams. It will only load an ad if target_dreams is set to true (or if target_all_categories is true) AND the slot name matches exactly.
+
+On the Health Page: You pass category="health". The code tracks the condition column target_health. It ensures only clinical, medical, or wellness ads populate into that layout slot.
+
+3. Google AdSense Fallback Feature
+If your custom database queries return no active rows (ads.length === 0), the code checks your configuration flag showGoogleFallback.
+
+If showGoogleFallback={true}, instead of rendering blank space or disappearing, it automatically falls back to rendering a cleanly styled gray network banner placeholder stating "Google AdSense" along with the specific network unit reference parameter (googleSlot).
