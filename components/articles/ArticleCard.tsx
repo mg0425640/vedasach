@@ -48,7 +48,7 @@ export default function ArticleCard({ article, variant = 'default' }: ArticleCar
           <img
             src={image}
             alt={title}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            className="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500"
           />
         </div>
         <div className="flex-1 min-w-0">
@@ -76,7 +76,7 @@ export default function ArticleCard({ article, variant = 'default' }: ArticleCar
     return (
       <Link href={href} className="flex gap-3 group py-2 border-b border-[#F5F5F5] last:border-0">
         <div className="flex-shrink-0 w-16 h-12 overflow-hidden">
-          <img src={image} alt={title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <img src={image} alt={title} className="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500" />
         </div>
         <div>
           <h4 className="text-[13px] font-medium text-[#111] group-hover:text-brand transition-colors line-clamp-2 leading-snug font-body">{title}</h4>
@@ -93,7 +93,7 @@ export default function ArticleCard({ article, variant = 'default' }: ArticleCar
           <img
             src={image}
             alt={title}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            className="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-700"
             style={{ position: 'absolute', inset: 0, minHeight: '400px' }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
@@ -125,7 +125,7 @@ export default function ArticleCard({ article, variant = 'default' }: ArticleCar
         <img
           src={image}
           alt={title}
-          className="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500"
+          className="w-full h-52 object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500"
         />
       </div>
       <div>

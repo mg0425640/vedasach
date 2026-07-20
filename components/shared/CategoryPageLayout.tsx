@@ -50,6 +50,16 @@ const SLUG_TO_CATEGORY: Record<string, string> = {
   'home-remedies': 'Home Remedies',
   spirituality: 'Spirituality',
   dreams: 'Dream Meanings',
+  world: 'World',
+  'fifa-world-cup': 'FIFA World Cup',
+  lifestyle: 'Lifestyle',
+  religion: 'Religion',
+  business: 'Business',
+  entertainment: 'Entertainment',
+  'real-estate': 'Real Estate',
+  legal: 'Legal',
+  tech: 'Tech',
+  education: 'Education',
 };
 
 const PER_PAGE_OPTIONS = [10, 20, 30];
@@ -149,9 +159,9 @@ export default function CategoryPageLayout({ title, title_hi, description, descr
       <div className="bg-[#111] text-white py-10">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <span className="text-3xl mb-3 block">{icon}</span>
-          <h1 className="font-display text-3xl md:text-4xl font-bold mb-3">{displayTitle}</h1>
-          <p className="text-[#AAA] font-body max-w-2xl mx-auto text-sm">{displayDesc}</p>
-          <p className="text-[#666] text-xs font-body mt-2">{totalCount} {lang === 'hi' ? 'लेख' : 'Articles'}</p>
+          <h1 className="font-display text-3xl md:text-4xl text-brand font-bold mb-3">{displayTitle}</h1>
+          <p className="text-white font-body max-w-2xl mx-auto text-sm">{displayDesc}</p>
+          <p className="text-white text-xs font-body mt-2">{totalCount} {lang === 'hi' ? 'लेख' : 'Articles'}</p>
         </div>
       </div>
 
@@ -255,7 +265,7 @@ export default function CategoryPageLayout({ title, title_hi, description, descr
                   </h2>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
                   {(page === 1 ? rest : articles).map((article) => (
                     <ArticleCard key={article.id} article={article} />
                   ))}

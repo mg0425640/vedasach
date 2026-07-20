@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/admin', '/admin/', '/dashboard', '/dashboard/', '/cart', '/checkout', '/api/'],
     },
-    sitemap: 'https://vedasach.com/sitemap.xml',
-    host: 'https://vedasach.com',
+    sitemap: 'https://vedawell.in/sitemap.xml',
+    host: 'https://vedawell.in',
   };
 }

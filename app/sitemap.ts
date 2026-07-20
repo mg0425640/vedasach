@@ -4,7 +4,7 @@ import { supabase } from '@/lib/supabase-server';
 export const dynamic = 'force-dynamic';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const base = 'https://vedasach.com';
+  const base = 'https://vedawell.in';
 
   const staticPages: MetadataRoute.Sitemap = [
     { url: `${base}/`, priority: 1.0, changeFrequency: 'daily' },
@@ -20,6 +20,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${base}/nutrition`, priority: 0.8, changeFrequency: 'weekly' },
     { url: `${base}/spirituality`, priority: 0.8, changeFrequency: 'weekly' },
     { url: `${base}/home-remedies`, priority: 0.8, changeFrequency: 'weekly' },
+    { url: `${base}/world`, priority: 0.7, changeFrequency: 'daily' },
+    { url: `${base}/fifa-world-cup`, priority: 0.7, changeFrequency: 'daily' },
+    { url: `${base}/lifestyle`, priority: 0.7, changeFrequency: 'weekly' },
+    { url: `${base}/religion`, priority: 0.7, changeFrequency: 'weekly' },
+    { url: `${base}/business`, priority: 0.7, changeFrequency: 'daily' },
+    { url: `${base}/entertainment`, priority: 0.7, changeFrequency: 'daily' },
+    { url: `${base}/real-estate`, priority: 0.7, changeFrequency: 'weekly' },
+    { url: `${base}/legal`, priority: 0.7, changeFrequency: 'weekly' },
+    { url: `${base}/tech`, priority: 0.7, changeFrequency: 'daily' },
+    { url: `${base}/education`, priority: 0.7, changeFrequency: 'weekly' },
+    { url: `${base}/privacy`, priority: 0.3, changeFrequency: 'yearly' },
+    { url: `${base}/terms`, priority: 0.3, changeFrequency: 'yearly' },
+    { url: `${base}/disclaimer`, priority: 0.3, changeFrequency: 'yearly' },
   ];
 
   const categorySlugs: Record<string, string> = {
@@ -31,6 +44,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     'Nutrition': 'nutrition',
     'Spirituality': 'spirituality',
     'Home Remedies': 'home-remedies',
+    'World': 'world',
+    'FIFA World Cup': 'fifa-world-cup',
+    'Lifestyle': 'lifestyle',
+    'Religion': 'religion',
+    'Business': 'business',
+    'Entertainment': 'entertainment',
+    'Real Estate': 'real-estate',
+    'Legal': 'legal',
+    'Tech': 'tech',
+    'Education': 'education',
   };
 
   let articlePages: MetadataRoute.Sitemap = [];

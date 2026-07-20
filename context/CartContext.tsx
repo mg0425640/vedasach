@@ -29,19 +29,23 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export function CartProvider({ children }: { children: ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([]);
+  const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
-    const saved = localStorage.getItem('vedasach_cart');
+    const saved = localStorage.getItem('vedawell_cart');
     if (saved) {
       try {
         setItems(JSON.parse(saved));
       } catch {}
     }
+    setHydrated(true);
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('vedasach_cart', JSON.stringify(items));
-  }, [items]);
+    if (hydrated) {
+      localStorage.setItem('vedawell_cart', JSON.stringify(items));
+    }
+  }, [items, hydrated]);
 
   const addItem = (item: Omit<CartItem, 'quantity'>) => {
     setItems((prev) => {

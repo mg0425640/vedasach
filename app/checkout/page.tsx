@@ -448,7 +448,7 @@ export default function CheckoutPage() {
               <button
                 onClick={handlePayNow}
                 disabled={processing || !razorpayLoaded}
-                className="w-full bg-brand text-white py-3 font-body font-semibold hover:bg-brand/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                className="w-full border border-brand bg-brand text-black py-3 font-body font-semibold hover:bg-brand/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 {processing ? (
                   <>

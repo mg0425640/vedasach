@@ -26,7 +26,7 @@ export default function ContactPage() {
 
       <div className="bg-[#111] text-white py-12">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="font-display text-3xl md:text-4xl font-bold mb-3">Get in Touch</h1>
+          <h1 className="font-display text-3xl md:text-4xl text-brand font-bold mb-3">Get in Touch</h1>
           <p className="text-[#AAA] font-body">Have a question, feedback, or want to collaborate? We'd love to hear from you.</p>
         </div>
       </div>
@@ -42,9 +42,9 @@ export default function ContactPage() {
             <h2 className="font-display text-xl font-bold text-[#111] mb-6">Contact Information</h2>
             <div className="space-y-5">
               {[
-                { Icon: Mail, title: 'Email', lines: ['hello@vedasach.in', 'editorial@vedasach.in'] },
-                { Icon: Phone, title: 'Phone', lines: ['+91 98765 43210', 'Mon–Fri, 10AM–6PM IST'] },
-                { Icon: MapPin, title: 'Office', lines: ['123 Wellness Avenue,', 'Banjara Hills, Hyderabad – 500034', 'Telangana, India'] },
+                { Icon: Mail, title: 'Email', lines: ['Govindsingh747@gmail.com', 'editorial@vedasach.com'] },
+                { Icon: Phone, title: 'Phone', lines: ['+91 98731 60180', 'Mon–Fri, 10AM–6PM IST'] },
+                { Icon: MapPin, title: 'Office', lines: ['3122, PC-2,', 'NIT Faridabad, Faridabad – 121005', 'Haryana, India'] },
                 { Icon: Clock, title: 'Business Hours', lines: ['Monday – Friday: 10AM – 6PM', 'Saturday: 10AM – 2PM', 'Sunday: Closed'] },
               ].map(({ Icon, title, lines }) => (
                 <div key={title} className="flex gap-4">

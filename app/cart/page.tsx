@@ -131,7 +131,7 @@ export default function CartPage() {
                   </div>
                 )}
 
-                <Link href="/checkout" className="block w-full mt-6 bg-brand text-white text-center py-3 font-body font-semibold hover:bg-brand/90 transition-colors">
+                <Link href="/checkout" className="block w-full border border-brand mt-6 bg-brand text-black text-center py-3 font-body font-semibold hover:bg-brand transition-colors">
                   {lang === 'hi' ? 'चेकआउट करें' : 'Proceed to Checkout'}
                 </Link>
 
