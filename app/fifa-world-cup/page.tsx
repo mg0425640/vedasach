@@ -1,7 +1,7 @@
 import CategoryPageLayout from '@/components/shared/CategoryPageLayout';
 
 export const metadata = {
-  title: 'FIFA World Cup – VedaWell',
+  title: 'FIFA World Cup – vedasach',
   description: 'FIFA World Cup news, match updates, fixtures, results, and analysis.',
 };
 

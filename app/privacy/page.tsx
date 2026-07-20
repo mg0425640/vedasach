@@ -46,8 +46,8 @@ export default function PrivacyPolicyPage() {
         {
           title: { en: 'Your Rights and Responsibilities', hi: 'आपके अधिकार और जिम्मेदारियां' },
           body: {
-            en: 'You have the right to access your personal data, request corrections, request deletion of your account and data, export your data, opt out of marketing communications, and withdraw consent for data processing. You are responsible for maintaining the confidentiality of your account credentials and for all activities under your account. To exercise any right, email support@vedawell.in.',
-            hi: 'आपको अपने व्यक्तिगत डेटा तक पहुंचने, सुधार का अनुरोध करने, अपने खाते और डेटा को हटाने का अनुरोध करने, अपना डेटा निर्यात करने, विपणन संचार से बाहर निकलने, और डेटा प्रोसेसिंग के लिए सहमति वापस लेने का अधिकार है। आप अपने खाते क्रेडेंशियल की गोपनीयता बनाए रखने और अपने खाते के तहत सभी गतिविधियों के लिए जिम्मेदार हैं। किसी भी अधिकार का उपयोग करने के लिए, support@vedawell.in पर ईमेल करें।',
+            en: 'You have the right to access your personal data, request corrections, request deletion of your account and data, export your data, opt out of marketing communications, and withdraw consent for data processing. You are responsible for maintaining the confidentiality of your account credentials and for all activities under your account. To exercise any right, email support@vedasach.com.',
+            hi: 'आपको अपने व्यक्तिगत डेटा तक पहुंचने, सुधार का अनुरोध करने, अपने खाते और डेटा को हटाने का अनुरोध करने, अपना डेटा निर्यात करने, विपणन संचार से बाहर निकलने, और डेटा प्रोसेसिंग के लिए सहमति वापस लेने का अधिकार है। आप अपने खाते क्रेडेंशियल की गोपनीयता बनाए रखने और अपने खाते के तहत सभी गतिविधियों के लिए जिम्मेदार हैं। किसी भी अधिकार का उपयोग करने के लिए, support@vedasach.com पर ईमेल करें।',
           },
         },
         {

@@ -1,7 +1,7 @@
 import CategoryPageLayout from '@/components/shared/CategoryPageLayout';
 
 export const metadata = {
-  title: 'Business – VedaWell',
+  title: 'Business – vedasach',
   description: 'Business news, market updates, startups, and economic analysis.',
 };
 

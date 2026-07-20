@@ -111,7 +111,7 @@ export default function HomeContent({
     '@type': 'ItemList',
     itemListElement: latestArticles.slice(0, 6).map((a, i) => ({
       '@type': 'ListItem', position: i + 1,
-      url: `https://vedawell.in/${getCategorySlug(a.category)}/${a.slug}`,
+      url: `https://vedasach.com/${getCategorySlug(a.category)}/${a.slug}`,
       name: a.title,
     })),
   };

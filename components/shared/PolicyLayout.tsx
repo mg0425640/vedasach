@@ -68,7 +68,7 @@ export default function PolicyLayout({
           <p className="text-sm text-[#666] font-body">
             {lang === 'hi' ? 'कोई प्रश्न? हमसे संपर्क करें:' : 'Questions? Contact us:'}
           </p>
-          <a href="mailto:support@vedawell.in" className="text-brand font-bold text-sm hover:underline">support@vedawell.in</a>
+          <a href="mailto:support@vedasach.com" className="text-brand font-bold text-sm hover:underline">support@vedasach.com</a>
         </div>
       </div>
     </div>

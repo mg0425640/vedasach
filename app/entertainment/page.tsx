@@ -1,7 +1,7 @@
 import CategoryPageLayout from '@/components/shared/CategoryPageLayout';
 
 export const metadata = {
-  title: 'Entertainment – VedaWell',
+  title: 'Entertainment – vedasach',
   description: 'Entertainment news, Bollywood, movies, music, and celebrity updates.',
 };
 

@@ -1,7 +1,7 @@
 import CategoryPageLayout from '@/components/shared/CategoryPageLayout';
 
 export const metadata = {
-  title: 'Religion – VedaWell',
+  title: 'Religion – vedasach',
   description: 'Religion news, spiritual guidance, and articles on faith traditions.',
 };
 

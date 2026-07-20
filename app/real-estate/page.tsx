@@ -1,7 +1,7 @@
 import CategoryPageLayout from '@/components/shared/CategoryPageLayout';
 
 export const metadata = {
-  title: 'Real Estate – VedaWell',
+  title: 'Real Estate – vedasach',
   description: 'Real estate news, property trends, and investment insights.',
 };
 

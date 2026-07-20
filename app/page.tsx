@@ -6,15 +6,15 @@ import { Product } from '@/lib/types';
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: 'VedaWell – Wellness, Ayurveda, Dream Meanings & Natural Health',
+  title: 'VedaSach – Wellness, Ayurveda, Dream Meanings & Natural Health',
   description: "India's #1 wellness platform. Discover dream meanings, Ayurvedic wisdom, yoga, home remedies, beauty tips, and natural health solutions. Healthy Mind • Healthy Body • Positive Life.",
   alternates: { canonical: '/' },
   openGraph: {
     type: 'website',
-    title: 'VedaWell – Wellness, Ayurveda & Dream Meanings',
+    title: 'VedaSach – Wellness, Ayurveda & Dream Meanings',
     description: "India's #1 wellness platform. Healthy Mind • Healthy Body • Positive Life.",
-    url: 'https://vedawell.in',
-    images: [{ url: '/logo.svg', width: 180, height: 48, alt: 'VedaWell Logo' }],
+    url: 'https://www.vedasach.com',
+    images: [{ url: '/logo.svg', width: 180, height: 48, alt: 'VedaSach Logo' }],
   },
 };
 

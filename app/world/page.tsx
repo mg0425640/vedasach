@@ -1,7 +1,7 @@
 import CategoryPageLayout from '@/components/shared/CategoryPageLayout';
 
 export const metadata = {
-  title: 'World News – VedaWell',
+  title: 'World News – VedaSach',
   description: 'Latest world news, global events, and international affairs from around the globe.',
 };
 

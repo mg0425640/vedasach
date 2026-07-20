@@ -70,7 +70,7 @@ export default function AboutPage() {
     { Icon: CheckCircle, title: hi ? 'सटीकता और सत्य' : 'Accuracy & Truth', desc: hi ? 'हम सभी स्वास्थ्य दावों को सहकर्मी-समीक्षित शोध के विरुद्ध जांचते हैं। पारंपरिक ज्ञान के लिए, हम विश्वास और वैज्ञानिक साक्ष्य को स्पष्ट रूप से अलग करते हैं।' : "We fact-check all health claims against peer-reviewed research. For traditional knowledge, we clearly distinguish belief from scientific evidence." },
     { Icon: Heart, title: hi ? 'वास्तविक देखभाल' : 'Genuine Care', desc: hi ? 'हर लेख पाठक के कल्याण के साथ लिखा जाता है — क्लिक या उत्पाद बेचने के लिए नहीं, बल्कि वास्तव में मदद करने के लिए।' : "Every article is written with the reader's wellbeing in mind — not to generate clicks or sell products, but to genuinely help." },
     { Icon: BookOpen, title: hi ? 'गहन ज्ञान' : 'Deep Knowledge', desc: hi ? 'हमारी टीम में योग्य आयुर्वेदिक डॉक्टर, योग शिक्षक, पोषण विशेषज्ञ और शोधकर्ता शामिल हैं। गहराई चौड़ाई से ऊपर, हमेशा।' : 'Our team includes qualified Ayurvedic doctors, yoga teachers, nutritionists, and researchers. Depth over breadth, always.' },
-    { Icon: Users, title: hi ? 'समुदाय पहले' : 'Community First', desc: hi ? 'VedaWell हमारे पाठकों की सेवा के लिए मौजूद है। हम सुनते हैं, हम प्रतिक्रिया देते हैं, और आपकी आवश्यकताओं के आधार पर लगातार सुधार करते हैं।' : 'VedaWell exists to serve our readers. We listen, we respond, and we continuously improve based on your needs and feedback.' },
+    { Icon: Users, title: hi ? 'समुदाय पहले' : 'Community First', desc: hi ? 'vedasach हमारे पाठकों की सेवा के लिए मौजूद है। हम सुनते हैं, हम प्रतिक्रिया देते हैं, और आपकी आवश्यकताओं के आधार पर लगातार सुधार करते हैं।' : 'vedasach exists to serve our readers. We listen, we respond, and we continuously improve based on your needs and feedback.' },
     { Icon: TrendingUp, title: hi ? 'आधुनिक + पारंपरिक' : 'Modern + Traditional', desc: hi ? 'हम प्राचीन ज्ञान को आधुनिक विज्ञान के साथ जोड़ते हैं — परंपरा का सम्मान करते हुए साक्ष्य-आधारित सत्यापन को अपनाते हैं।' : 'We bridge ancient wisdom with modern science — respecting tradition while embracing evidence-based validation.' },
     { Icon: Award, title: hi ? 'गुणवत्ता उत्पाद' : 'Quality Products', desc: hi ? 'हमारा शॉप केवल उन उत्पादों को रखता है जिन्हें हमने गुणवत्ता, प्रामाणिकता और प्रभावशीलता के लिए स्वयं जांचा है।' : "Our shop only carries products we've personally vetted for quality, authenticity, and efficacy. We never compromise on standards." },
   ];
@@ -104,11 +104,11 @@ export default function AboutPage() {
           </h1>
           <p className="text-[#AAA] font-body text-lg leading-relaxed max-w-2xl mx-auto">
             {hi
-              ? 'VedaWell भारत का विश्वसनीय वेलनेस और ज्ञान प्लेटफ़ॉर्म है। हम 5,000 वर्षों की आयुर्वेदिक बुद्धिमत्ता को आधुनिक स्वास्थ्य अनुसंधान के साथ जोड़ते हैं ताकि आप स्वस्थ और अधिक सार्थक जीवन जी सकें।'
-              : "VedaWell is India's trusted wellness and knowledge platform. We combine 5,000 years of Ayurvedic wisdom with modern health research to help you live a healthier, more meaningful life."}
+              ? 'vedasach भारत का विश्वसनीय वेलनेस और ज्ञान प्लेटफ़ॉर्म है। हम 5,000 वर्षों की आयुर्वेदिक बुद्धिमत्ता को आधुनिक स्वास्थ्य अनुसंधान के साथ जोड़ते हैं ताकि आप स्वस्थ और अधिक सार्थक जीवन जी सकें।'
+              : "vedasach is India's trusted wellness and knowledge platform. We combine 5,000 years of Ayurvedic wisdom with modern health research to help you live a healthier, more meaningful life."}
           </p>
           <div className="mt-6 flex items-center justify-center gap-2">
-            <img src="/logo.svg" alt="VedaWell Logo" className="h-10 w-auto brightness-0 invert opacity-80" />
+            <img src="/logo.svg" alt="vedasach Logo" className="h-10 w-auto brightness-0 invert opacity-80" />
           </div>
         </div>
       </section>
@@ -148,8 +148,8 @@ export default function AboutPage() {
             </p>
             <p className="text-[#555] font-body leading-relaxed mb-4">
               {hi
-                ? 'VedaWell की स्थापना इसे बदलने के लिए हुई थी। हम योग्य आयुर्वेदिक चिकित्सकों, योग शिक्षकों, पोषण विशेषज्ञों और वेलनेस शोधकर्ताओं के साथ काम करते हैं ताकि सटीक, व्यावहारिक और वास्तव में उपयोगी सामग्री बनाई जा सके।'
-                : 'VedaWell was founded to change that. We work with qualified Ayurvedic physicians, yoga teachers, nutritionists, and wellness researchers to create content that is accurate, practical, and genuinely helpful.'}
+                ? 'vedasach की स्थापना इसे बदलने के लिए हुई थी। हम योग्य आयुर्वेदिक चिकित्सकों, योग शिक्षकों, पोषण विशेषज्ञों और वेलनेस शोधकर्ताओं के साथ काम करते हैं ताकि सटीक, व्यावहारिक और वास्तव में उपयोगी सामग्री बनाई जा सके।'
+                : 'vedasach was founded to change that. We work with qualified Ayurvedic physicians, yoga teachers, nutritionists, and wellness researchers to create content that is accurate, practical, and genuinely helpful.'}
             </p>
             <p className="text-[#555] font-body leading-relaxed">
               {hi
@@ -176,7 +176,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-10">
             <h2 className="font-display text-3xl font-bold text-[#111] mb-2">{hi ? 'हम किसके लिए खड़े हैं' : 'What We Stand For'}</h2>
-            <p className="text-[#888] font-body">{hi ? 'वे मूल्य जो VedaWell पर हर लेख, उत्पाद और निर्णय का मार्गदर्शन करते हैं' : 'The values that guide every article, product, and decision at VedaWell'}</p>
+            <p className="text-[#888] font-body">{hi ? 'वे मूल्य जो vedasach पर हर लेख, उत्पाद और निर्णय का मार्गदर्शन करते हैं' : 'The values that guide every article, product, and decision at vedasach'}</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {values.map(({ Icon, title, desc }) => (
@@ -194,7 +194,7 @@ export default function AboutPage() {
       <section className="max-w-7xl mx-auto px-4 py-12">
         <div className="text-center mb-10">
           <h2 className="font-display text-3xl font-bold text-[#111] mb-2">{hi ? 'हमारी विशेषज्ञ टीम' : 'Our Expert Team'}</h2>
-          <p className="text-[#888] font-body">{hi ? 'VedaWell की विश्वसनीय सामग्री के पीछे के विशेषज्ञों से मिलें' : 'Meet the specialists behind VedaWell\'s trusted content'}</p>
+          <p className="text-[#888] font-body">{hi ? 'vedasach की विश्वसनीय सामग्री के पीछे के विशेषज्ञों से मिलें' : 'Meet the specialists behind vedasach\'s trusted content'}</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {team.map((member) => (

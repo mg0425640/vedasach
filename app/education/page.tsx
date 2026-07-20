@@ -1,7 +1,7 @@
 import CategoryPageLayout from '@/components/shared/CategoryPageLayout';
 
 export const metadata = {
-  title: 'Education – VedaWell',
+  title: 'Education – vedasach',
   description: 'Education news, career guidance, exams, and learning resources.',
 };
 

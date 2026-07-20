@@ -1,7 +1,7 @@
 import CategoryPageLayout from '@/components/shared/CategoryPageLayout';
 
 export const metadata = {
-  title: 'Lifestyle – VedaWell',
+  title: 'Lifestyle – vedasach',
   description: 'Lifestyle tips, trends, and inspiration for modern living.',
 };
 

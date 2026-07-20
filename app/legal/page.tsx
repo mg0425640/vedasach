@@ -1,7 +1,7 @@
 import CategoryPageLayout from '@/components/shared/CategoryPageLayout';
 
 export const metadata = {
-  title: 'Legal – VedaWell',
+  title: 'Legal – vedasach',
   description: 'Legal news, law updates, court rulings, and legal analysis.',
 };
 

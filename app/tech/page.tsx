@@ -1,7 +1,7 @@
 import CategoryPageLayout from '@/components/shared/CategoryPageLayout';
 
 export const metadata = {
-  title: 'Tech – VedaWell',
+  title: 'Tech – vedasach',
   description: 'Technology news, gadgets, AI, startups, and innovation.',
 };
 
