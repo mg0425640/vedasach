@@ -290,7 +290,7 @@ export default function Header() {
                 <div className="relative group" onMouseEnter={() => setActiveDropdown('__login')} onMouseLeave={() => setActiveDropdown(null)}>
                   <button
                     onClick={() => openAuthModal('login')}
-                    className="flex items-center gap-1.5 px-4 py-2 bg-brand text-white text-[11px] font-bold uppercase tracking-wider hover:bg-[#C93D0E] transition-colors font-body"
+                    className="flex items-center gap-1.5 px-4 py-2 bg-brand text-black border border-brand text-[11px] font-bold uppercase tracking-wider hover:bg-[#C93D0E] hover:text-white transition-colors font-body"
                   >
                     {t('login')}
                     <ChevronDown size={11} className="opacity-80" />

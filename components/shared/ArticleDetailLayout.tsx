@@ -355,7 +355,7 @@ export default function ArticleDetailLayout({ slug, categorySlug, categoryLabel,
               <div>
                 <div className="text-[10px] font-semibold uppercase tracking-wider text-brand font-body mb-0.5">{lang === 'hi' ? 'द्वारा लिखित' : 'Written by'}</div>
                 <h4 className="font-display text-base font-bold text-[#111]">{article.author}</h4>
-                <p className="text-xs text-[#666] font-body mt-1">{lang === 'hi' ? 'आयुर्वेद, प्राकृतिक स्वास्थ्य और समग्र जीवन में गहरे ज्ञान के साथ विशेषज्ञ वेलनेस लेखक।' : 'Expert wellness writer and researcher with deep knowledge in Ayurveda, natural health, and holistic living.'}</p>
+                <p className="text-xs text-[#666] font-body mt-1">{lang === 'hi' ? 'वेदसच संपादकीय टीम अपने-अपने क्षेत्रों के विशेषज्ञों का एक ऐसा समूह है, जो प्रामाणिक स्वास्थ्य ज्ञान के माध्यम से समुदाय को सशक्त बनाने और उनका मार्गदर्शन करने के लिए एक साथ आया है।' : 'The VedaSach Editorial Team is a collective of field experts who have joined forces to empower and support our community through authentic wellness knowledge.'}</p>
               </div>
             </div>
 
