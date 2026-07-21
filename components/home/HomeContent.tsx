@@ -117,10 +117,10 @@ export default function HomeContent({
   };
 
   const stats = [
-    { value: '10,000+', label: hi ? 'विशेषज्ञ लेख' : 'Expert Articles' },
-    { value: '50,000+', label: hi ? 'मासिक पाठक' : 'Monthly Readers' },
-    { value: '500+', label: hi ? 'स्वप्न अर्थ' : 'Dream Meanings' },
-    { value: '200+', label: hi ? 'वेलनेस उत्पाद' : 'Wellness Products' },
+    { value: '1,000+', label: hi ? 'विशेषज्ञ लेख' : 'Expert Articles' },
+    { value: '5,000+', label: hi ? 'मासिक पाठक' : 'Monthly Readers' },
+    { value: '50+', label: hi ? 'स्वप्न अर्थ' : 'Dream Meanings' },
+    { value: '20+', label: hi ? 'वेलनेस उत्पाद' : 'Wellness Products' },
   ];
 
   return (

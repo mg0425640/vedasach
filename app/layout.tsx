@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   description: "India's trusted wellness platform covering dream meanings, Ayurveda, yoga, home remedies, beauty, nutrition, and spirituality. Healthy Mind • Healthy Body • Positive Life.",
   keywords: ['ayurveda', 'dream meanings', 'yoga', 'home remedies', 'wellness', 'natural health', 'spirituality', 'nutrition', 'beauty', 'meditation'],
-  authors: [{ name: 'VedaSach Editorial Team', url: 'https://vedasach.com/about' }],
+  authors: [{ name: 'VedaSach Editorial Team', url: 'https://www.vedasach.com/about' }],
   creator: 'VedaSach Editorial Team',
   publisher: 'VedaSach',
   applicationName: 'VedaSach',
@@ -48,7 +48,6 @@ export const metadata: Metadata = {
     icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
     apple: [{ url: '/favicon.svg' }],
   },
-  verification: { google: '' },
 };
 
 const organizationSchema = {
