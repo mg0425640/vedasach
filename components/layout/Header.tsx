@@ -56,6 +56,14 @@ const getNavItems = (t: (k: string) => string, lang: string) => [
       { label: t('legal'), href: '/legal', icon: '⚖️', desc: lang === 'hi' ? 'कानूनी' : 'Legal news' },
       { label: t('tech'), href: '/tech', icon: '💻', desc: lang === 'hi' ? 'तकनीक' : 'Technology' },
       { label: t('education'), href: '/education', icon: '📚', desc: lang === 'hi' ? 'शिक्षा' : 'Education' },
+      { label: t('science'), href: '/science', icon: '🔬', desc: lang === 'hi' ? 'विज्ञान' : 'Science news' },
+      { label: t('sports'), href: '/sports', icon: '🏅', desc: lang === 'hi' ? 'खेल' : 'Sports news' },
+      { label: t('travel'), href: '/travel', icon: '✈️', desc: lang === 'hi' ? 'यात्रा' : 'Travel tips' },
+      { label: t('healthcare'), href: '/healthcare', icon: '🏥', desc: lang === 'hi' ? 'स्वास्थ्य देखभाल' : 'Healthcare news' },
+      { label: t('automobile'), href: '/automobile', icon: '🚗', desc: lang === 'hi' ? 'ऑटोमोबाइल' : 'Automobile news' },
+      { label: t('agriculture'), href: '/agriculture', icon: '🌾', desc: lang === 'hi' ? 'कृषि' : 'Agriculture'},
+      { label: t('environment'), href: '/environment', icon: '🌎', desc: lang === 'hi' ? 'पर्यावरण' : 'Environment news' },
+      { label: t('politics'), href: '/politics', icon: '🏛️', desc: lang === 'hi' ? 'राजनीति' : 'Politics news' },
     ],
     megaMenuAlign: 'right',
   },
@@ -141,7 +149,7 @@ export default function Header() {
                   </Link>
                   {item.megaMenu && activeDropdown === item.label && (
                     <div className={`absolute top-full ${item.megaMenuAlign === 'right' ? 'right-0' : 'left-0'} w-[480px] max-w-[calc(100vw-2rem)] bg-white border border-[#E8E8E8] shadow-2xl z-50 p-6 animate-in fade-in duration-150`}>
-                      <div className="grid grid-cols-2 gap-2">
+                      <div className="grid grid-cols-3 gap-2">
                         {item.megaMenu.map((mi) => (
                           <Link key={mi.href} href={mi.href} className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-[#FFF8F6] hover:border-brand border border-transparent transition-all group">
                             <span className="text-2xl flex-shrink-0">{mi.icon}</span>
