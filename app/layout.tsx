@@ -30,7 +30,10 @@ export const metadata: Metadata = {
     title: 'VedaSach – Wellness, Ayurveda & Dream Meanings',
     description: "India's trusted wellness platform. Healthy Mind • Healthy Body • Positive Life.",
     url: 'https://www.vedasach.com',
-    images: [{ url: '/logo.svg', width: 180, height: 48, alt: 'VedaSach Logo' }],
+    images: [{ url: '/og-image.png',
+      width: 1200,
+      height: 630,
+      alt: 'VedaSach',}],
   },
   twitter: {
     card: 'summary_large_image',
@@ -45,8 +48,12 @@ export const metadata: Metadata = {
   },
   manifest: '/manifest.json',
   icons: {
-    icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
-    apple: [{ url: '/favicon.svg' }],
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/icon-192.png', type: 'image/png', sizes: '192x192' },
+    ],
+    apple: '/apple-touch-icon.png',
+    shortcut: '/favicon.ico',
   },
 };
 
