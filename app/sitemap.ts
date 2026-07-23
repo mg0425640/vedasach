@@ -4,35 +4,219 @@ import { supabase } from '@/lib/supabase-server';
 export const dynamic = 'force-dynamic';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const base = 'https://www.vedasach.com';
+  const base = 'https://vedasach.com';
+  const today = new Date();
 
   const staticPages: MetadataRoute.Sitemap = [
-    { url: `${base}/`, priority: 1.0, changeFrequency: 'daily' },
-    { url: `${base}/blog`, priority: 0.9, changeFrequency: 'daily' },
-    { url: `${base}/shop`, priority: 0.8, changeFrequency: 'weekly' },
-    { url: `${base}/about`, priority: 0.5, changeFrequency: 'monthly' },
-    { url: `${base}/contact`, priority: 0.5, changeFrequency: 'monthly' },
-    { url: `${base}/dreams`, priority: 0.8, changeFrequency: 'weekly' },
-    { url: `${base}/health`, priority: 0.8, changeFrequency: 'weekly' },
-    { url: `${base}/ayurveda`, priority: 0.8, changeFrequency: 'weekly' },
-    { url: `${base}/yoga`, priority: 0.8, changeFrequency: 'weekly' },
-    { url: `${base}/beauty`, priority: 0.8, changeFrequency: 'weekly' },
-    { url: `${base}/nutrition`, priority: 0.8, changeFrequency: 'weekly' },
-    { url: `${base}/spirituality`, priority: 0.8, changeFrequency: 'weekly' },
-    { url: `${base}/home-remedies`, priority: 0.8, changeFrequency: 'weekly' },
-    { url: `${base}/world`, priority: 0.7, changeFrequency: 'daily' },
-    { url: `${base}/fifa-world-cup`, priority: 0.7, changeFrequency: 'daily' },
-    { url: `${base}/lifestyle`, priority: 0.7, changeFrequency: 'weekly' },
-    { url: `${base}/religion`, priority: 0.7, changeFrequency: 'weekly' },
-    { url: `${base}/business`, priority: 0.7, changeFrequency: 'daily' },
-    { url: `${base}/entertainment`, priority: 0.7, changeFrequency: 'daily' },
-    { url: `${base}/real-estate`, priority: 0.7, changeFrequency: 'weekly' },
-    { url: `${base}/legal`, priority: 0.7, changeFrequency: 'weekly' },
-    { url: `${base}/tech`, priority: 0.7, changeFrequency: 'daily' },
-    { url: `${base}/education`, priority: 0.7, changeFrequency: 'weekly' },
-    { url: `${base}/privacy`, priority: 0.3, changeFrequency: 'yearly' },
-    { url: `${base}/terms`, priority: 0.3, changeFrequency: 'yearly' },
-    { url: `${base}/disclaimer`, priority: 0.3, changeFrequency: 'yearly' },
+    {
+      url: `${base}`,
+      lastModified: today,
+      changeFrequency: 'daily',
+      priority: 1.0,
+    },
+    {
+      url: `${base}/blog`,
+      lastModified: today,
+      changeFrequency: 'daily',
+      priority: 0.9,
+    },
+    {
+      url: `${base}/shop`,
+      lastModified: today,
+      changeFrequency: 'daily',
+      priority: 0.9,
+    },
+
+    {
+      url: `${base}/dreams`,
+      lastModified: today,
+      changeFrequency: 'daily',
+      priority: 0.9,
+    },
+    {
+      url: `${base}/health`,
+      lastModified: today,
+      changeFrequency: 'daily',
+      priority: 0.9,
+    },
+    {
+      url: `${base}/ayurveda`,
+      lastModified: today,
+      changeFrequency: 'daily',
+      priority: 0.9,
+    },
+    {
+      url: `${base}/yoga`,
+      lastModified: today,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${base}/beauty`,
+      lastModified: today,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${base}/nutrition`,
+      lastModified: today,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${base}/spirituality`,
+      lastModified: today,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${base}/home-remedies`,
+      lastModified: today,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+
+    {
+      url: `${base}/world`,
+      lastModified: today,
+      changeFrequency: 'daily',
+      priority: 0.8,
+    },
+    {
+      url: `${base}/fifa-world-cup`,
+      lastModified: today,
+      changeFrequency: 'daily',
+      priority: 0.8,
+    },
+    {
+      url: `${base}/business`,
+      lastModified: today,
+      changeFrequency: 'daily',
+      priority: 0.8,
+    },
+    {
+      url: `${base}/tech`,
+      lastModified: today,
+      changeFrequency: 'daily',
+      priority: 0.8,
+    },
+    {
+      url: `${base}/politics`,
+      lastModified: today,
+      changeFrequency: 'daily',
+      priority: 0.8,
+    },
+    {
+      url: `${base}/sports`,
+      lastModified: today,
+      changeFrequency: 'daily',
+      priority: 0.8,
+    },
+    {
+      url: `${base}/science`,
+      lastModified: today,
+      changeFrequency: 'daily',
+      priority: 0.8,
+    },
+    {
+      url: `${base}/healthcare`,
+      lastModified: today,
+      changeFrequency: 'daily',
+      priority: 0.8,
+    },
+
+    {
+      url: `${base}/lifestyle`,
+      lastModified: today,
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
+      url: `${base}/religion`,
+      lastModified: today,
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
+      url: `${base}/real-estate`,
+      lastModified: today,
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
+      url: `${base}/legal`,
+      lastModified: today,
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
+      url: `${base}/education`,
+      lastModified: today,
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
+      url: `${base}/travel`,
+      lastModified: today,
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
+      url: `${base}/automobile`,
+      lastModified: today,
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
+      url: `${base}/agriculture`,
+      lastModified: today,
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
+      url: `${base}/environment`,
+      lastModified: today,
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+
+    {
+      url: `${base}/about`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.5,
+    },
+    {
+      url: `${base}/careers`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.5,
+    },
+    {
+      url: `${base}/contact`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.5,
+    },
+
+    {
+      url: `${base}/privacy`,
+      lastModified: today,
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
+    {
+      url: `${base}/terms`,
+      lastModified: today,
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
+    {
+      url: `${base}/disclaimer`,
+      lastModified: today,
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
   ];
 
   const categorySlugs: Record<string, string> = {
@@ -44,6 +228,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     'Nutrition': 'nutrition',
     'Spirituality': 'spirituality',
     'Home Remedies': 'home-remedies',
+
     'World': 'world',
     'FIFA World Cup': 'fifa-world-cup',
     'Lifestyle': 'lifestyle',
@@ -54,9 +239,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     'Legal': 'legal',
     'Tech': 'tech',
     'Education': 'education',
+
+    'Science': 'science',
+    'Sports': 'sports',
+    'Travel': 'travel',
+    'Healthcare': 'healthcare',
+    'Automobile': 'automobile',
+    'Agriculture': 'agriculture',
+    'Environment': 'environment',
+    'Politics': 'politics',
   };
 
   let articlePages: MetadataRoute.Sitemap = [];
+
   try {
     const { data: articles } = await supabase
       .from('articles')
@@ -64,33 +259,46 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       .eq('is_published', true);
 
     if (articles) {
-      articlePages = articles.map((a: any) => {
-        const catSlug = categorySlugs[a.category] || 'blog';
-        return {
-          url: `${base}/${catSlug}/${a.slug}`,
-          priority: 0.7,
-          changeFrequency: 'weekly' as const,
-          lastModified: a.updated_at || a.published_at ? new Date(a.updated_at || a.published_at) : undefined,
-        };
-      });
+      articlePages = articles.map((article: any) => ({
+        url: `${base}/${categorySlugs[article.category] || 'blog'}/${article.slug}`,
+        lastModified: article.updated_at
+          ? new Date(article.updated_at)
+          : article.published_at
+          ? new Date(article.published_at)
+          : today,
+        changeFrequency: 'weekly',
+        priority: 0.7,
+      }));
     }
-  } catch {}
+  } catch (error) {
+    console.error(error);
+  }
 
   let productPages: MetadataRoute.Sitemap = [];
+
   try {
     const { data: products } = await supabase
       .from('products')
-      .select('slug')
+      .select('slug, updated_at')
       .eq('in_stock', true);
 
     if (products) {
-      productPages = products.map((p: any) => ({
-        url: `${base}/shop/${p.slug}`,
+      productPages = products.map((product: any) => ({
+        url: `${base}/shop/${product.slug}`,
+        lastModified: product.updated_at
+          ? new Date(product.updated_at)
+          : today,
+        changeFrequency: 'weekly',
         priority: 0.6,
-        changeFrequency: 'weekly' as const,
       }));
     }
-  } catch {}
+  } catch (error) {
+    console.error(error);
+  }
 
-  return [...staticPages, ...articlePages, ...productPages];
+  return [
+    ...staticPages,
+    ...articlePages,
+    ...productPages,
+  ];
 }

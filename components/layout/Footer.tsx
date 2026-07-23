@@ -65,6 +65,7 @@ export default function Footer() {
     { label: t.blog, href: '/blog' },
     { label: t.aboutUs, href: '/about' },
     { label: t.contact, href: '/contact' },
+    { label: lang === 'hi' ? 'भर्ती' : 'Careers', href: '/careers' },
     { label: t.privacy, href: '/privacy' },
     { label: t.terms, href: '/terms' },
     { label: t.disclaimer, href: '/disclaimer' },
