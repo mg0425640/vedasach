@@ -4,7 +4,7 @@ import { supabase } from '@/lib/supabase-server';
 export const dynamic = 'force-dynamic';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const base = 'https://vedasach.com';
+  const base = 'https://www.vedasach.com';
   const today = new Date();
 
   const staticPages: MetadataRoute.Sitemap = [
