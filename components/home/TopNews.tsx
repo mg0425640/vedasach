@@ -20,24 +20,13 @@ interface TopNewsArticle {
 }
 
 const CATEGORY_SLUGS: Record<string, string> = {
-  'Dream Meanings': 'dreams',
-  'Health & Wellness': 'health',
-  'Ayurveda': 'ayurveda',
-  'Yoga & Meditation': 'yoga',
-  'Beauty': 'beauty',
-  'Nutrition': 'nutrition',
-  'Spirituality': 'spirituality',
-  'Home Remedies': 'home-remedies',
-  'World': 'world',
-  'FIFA World Cup': 'fifa-world-cup',
   'Lifestyle': 'lifestyle',
   'Religion': 'religion',
-  'Business': 'business',
-  'Entertainment': 'entertainment',
   'Real Estate': 'real-estate',
   'Legal': 'legal',
-  'Tech': 'tech',
   'Education': 'education',
+  'Sports': 'sports',
+  'Politics': 'politics',
 };
 
 function getCatSlug(cat: string) {
@@ -50,9 +39,46 @@ export default function TopNews({ articles }: { articles: TopNewsArticle[] }) {
 
   if (!articles || articles.length === 0) return null;
 
-  const centerArticle = articles[0];
-  const leftArticles = articles.slice(1, 6);
-  const rightArticles = articles.slice(6, 11);
+  // Ensure sorting by published_at descending (latest first) before filtering
+  const sortedArticles = [...articles].sort(
+    (a, b) => new Date(b.published_at).getTime() - new Date(a.published_at).getTime()
+  );
+
+  // Helper to fetch latest N articles by exact category match (case-insensitive & trimmed)
+  const getLatestByCategory = (catName: string, count: number) => {
+    return sortedArticles.filter(
+      (a) => a.category?.trim().toLowerCase() === catName.toLowerCase()
+    ).slice(0, count);
+  };
+
+  // Fetch exactly according to requirements:
+  // - 2 Lifestyle, 2 Religion, 1 Real Estate, 1 Legal, 2 Education, 2 Sports, 3 Politics
+  const lifestyleArticles = getLatestByCategory('Lifestyle', 2);
+  const religionArticles = getLatestByCategory('Religion', 2);
+  const realEstateArticles = getLatestByCategory('Real Estate', 1);
+  const legalArticles = getLatestByCategory('Legal', 1);
+  const educationArticles = getLatestByCategory('Education', 2);
+  const sportsArticles = getLatestByCategory('Sports', 2);
+  const politicsArticles = getLatestByCategory('Politics', 3);
+
+  // Assemble the precise pool of 13 articles
+  const selectedPool = [
+    ...politicsArticles.slice(0, 1), // Center feature article
+    ...lifestyleArticles,
+    ...religionArticles,
+    ...realEstateArticles,
+    ...legalArticles,
+    ...educationArticles,
+    ...sportsArticles,
+    ...politicsArticles.slice(1, 3),
+  ];
+
+  // Fallback to general sorted articles if any specific pool is empty or insufficient
+  const displayArticles = selectedPool.length >= 11 ? selectedPool : sortedArticles;
+
+  const centerArticle = displayArticles[0] || sortedArticles[0];
+  const leftArticles = displayArticles.slice(1, 6);
+  const rightArticles = displayArticles.slice(6, 11);
 
   const t = {
     topNews: isHi ? 'मुख्य समाचार' : 'Top News',

@@ -10,35 +10,9 @@ import NotificationPanel from '@/components/dashboard/NotificationPanel';
 
 const getNavItems = (t: (k: string) => string, lang: string) => [
   { label: t('home'), href: '/' },
-  {
-    label: t('dreams'), href: '/dreams',
-    megaMenu: [
-      { label: lang === 'hi' ? 'जानवर' : 'Animals', href: '/dreams?cat=animals', icon: '🐍', desc: lang === 'hi' ? 'जानवरों के स्वप्न' : 'Dream about animals' },
-      { label: lang === 'hi' ? 'प्रकृति' : 'Nature', href: '/dreams?cat=nature', icon: '🌳', desc: lang === 'hi' ? 'प्रकृति के स्वप्न' : 'Dream about nature' },
-      { label: lang === 'hi' ? 'तत्व' : 'Elements', href: '/dreams?cat=elements', icon: '💧', desc: lang === 'hi' ? 'तत्वों के स्वप्न' : 'Dream about elements' },
-      { label: lang === 'hi' ? 'सभी स्वप्न' : 'All Dreams', href: '/dreams', icon: '🌙', desc: lang === 'hi' ? 'सभी स्वप्न देखें' : 'Browse all dreams' },
-    ],
-    megaMenuAlign: 'left',
-  },
-  {
-    label: t('health'), href: '/health',
-    megaMenu: [
-      { label: lang === 'hi' ? 'वजन घटाना' : 'Weight Loss', href: '/health/weight-loss', icon: '⚖️', desc: lang === 'hi' ? 'स्वाभाविक रूप से वजन कम करें' : 'Lose weight naturally' },
-      { label: lang === 'hi' ? 'मधुमेह आहार' : 'Diabetes Diet', href: '/health/diabetes-diet', icon: '🩺', desc: lang === 'hi' ? 'रक्त शर्करा प्रबंधन' : 'Manage blood sugar' },
-      { label: lang === 'hi' ? 'पाचन' : 'Digestion', href: '/health/digestion', icon: '🍃', desc: lang === 'hi' ? 'पाचन में सुधार' : 'Improve gut health' },
-      { label: lang === 'hi' ? 'प्रतिरक्षा' : 'Immunity', href: '/health/immunity', icon: '🛡️', desc: lang === 'hi' ? 'रोग प्रतिरक्षा बढ़ाएं' : 'Boost your immunity' },
-    ],
-    megaMenuAlign: 'left',
-  },
-  {
-    label: t('ayurveda'), href: '/ayurveda',
-    megaMenu: [
-      { label: 'Ashwagandha', href: '/ayurveda/ashwagandha-benefits-dosage', icon: '🌿', desc: lang === 'hi' ? 'तनाव और ऊर्जा' : 'Stress & energy' },
-      { label: 'Giloy', href: '/ayurveda/giloy-benefits-immunity', icon: '🌱', desc: lang === 'hi' ? 'प्रतिरक्षा बढ़ाने वाला' : 'Immunity booster' },
-      { label: lang === 'hi' ? 'सभी जड़ी-बूटियां' : 'All Herbs', href: '/ayurveda', icon: '🌾', desc: lang === 'hi' ? 'सभी जड़ी-बूटियां देखें' : 'Browse all herbs' },
-    ],
-    megaMenuAlign: 'left',
-  },
+  { label: t('dreams'), href: '/dreams' },
+  { label: t('health'), href: '/health' },
+  { label: t('ayurveda'), href: '/ayurveda' },
   { label: t('yoga'), href: '/yoga' },
   { label: t('beauty'), href: '/beauty' },
   { label: t('blog'), href: '/blog' },

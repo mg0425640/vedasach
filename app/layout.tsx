@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'VedaSach – Wellness, Ayurveda & Dream Meanings',
     description: "India's trusted wellness platform. Healthy Mind • Healthy Body • Positive Life.",
-    images: ['/logo.svg'],
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,
