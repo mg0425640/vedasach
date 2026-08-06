@@ -2,15 +2,15 @@
 
 import CategoryPageLayout from '@/components/shared/CategoryPageLayout';
 
-export default function PoliticsPage() {
+export default function SportsPage() {
   return (
     <CategoryPageLayout
-      title="Politics"
-      title_hi="राजनीति"
-      description="Politics news, government updates, and policy analysis."
-      description_hi="राजनीति समाचार, सरकारी अपडेट, और नीति विश्लेषण।"
+      title="Sports"
+      title_hi="खेल"
+      description="Sports news, updates, and analysis."
+      description_hi="खेल समाचार, अपडेट, और विश्लेषण।"
       icon="🏛️"
-      slug="Politics"
+      slug="Sports"
     />
   );
 }

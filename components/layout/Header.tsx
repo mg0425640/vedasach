@@ -33,7 +33,6 @@ const getNavItems = (t: (k: string) => string, lang: string) => [
       { label: t('Science'), href: '/science', icon: '🔬', desc: lang === 'hi' ? 'विज्ञान' : 'Science news' },
       { label: t('Sports'), href: '/sports', icon: '🏅', desc: lang === 'hi' ? 'खेल' : 'Sports news' },
       { label: t('Travel'), href: '/travel', icon: '✈️', desc: lang === 'hi' ? 'यात्रा' : 'Travel tips' },
-      { label: t('Healthcare'), href: '/healthcare', icon: '🏥', desc: lang === 'hi' ? 'स्वास्थ्य देखभाल' : 'Healthcare news' },
       { label: t('Automobile'), href: '/automobile', icon: '🚗', desc: lang === 'hi' ? 'ऑटोमोबाइल' : 'Automobile news' },
       { label: t('Agriculture'), href: '/agriculture', icon: '🌾', desc: lang === 'hi' ? 'कृषि' : 'Agriculture'},
       { label: t('Environment'), href: '/environment', icon: '🌎', desc: lang === 'hi' ? 'पर्यावरण' : 'Environment news' },

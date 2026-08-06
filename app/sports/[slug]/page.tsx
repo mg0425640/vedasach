@@ -34,7 +34,7 @@ export async function generateStaticParams() {
   const { data } = await sb
     .from('articles')
     .select('slug')
-    .eq('category', 'Beauty')
+    .eq('category', 'Sports')
     .eq('is_published', true);
 
   return (data || []).map((a) => ({ slug: a.slug }));
@@ -52,8 +52,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  const title = a.meta_title || a.title || 'Politics Article – vedasach';
-  const description = a.meta_description || a.excerpt || 'Latest politics news, government updates, and policy analysis on vedasach.';
+  const title = a.meta_title || a.title || 'Sports Article – vedasach';
+  const description = a.meta_description || a.excerpt || 'Latest sports news, updates, and analysis on vedasach.';
   const imageUrl = a.og_image || a.image_url;
 
   // Use optional chaining with a fallback for the join
@@ -82,14 +82,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function PoliticsPage({ params }: Props) {
+export default async function SportsPage({ params }: Props) {
   const { slug } = await params;
 
   return (
     <ArticleDetailLayout
       slug={slug}
-      categorySlug="politics"
-      categoryLabel="Politics"
+      categorySlug="sports"
+      categoryLabel="Sports"
     />
   );
 }
