@@ -1,11 +1,14 @@
 import ArticleDetailLayout from '@/components/shared/ArticleDetailLayout';
 import { createClient } from '@supabase/supabase-js';
+import { articleMetadata, articleJsonLd } from '@/lib/seo';
 
 interface Props { params: { slug: string } }
 
 async function getArticle(slug: string) {
   const sb = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!);
-  const { data } = await sb.from('articles').select('title,excerpt,meta_title,meta_description,meta_keywords,og_image,image_url,category').eq('slug', slug).maybeSingle();
+  const { data } = await sb.from('articles')
+    .select('title,excerpt,meta_title,meta_description,meta_keywords,og_image,image_url,author,published_at,last_updated,category,noindex,canonical_url')
+    .eq('slug', slug).maybeSingle();
   return data;
 }
 
@@ -17,15 +20,16 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props) {
   const a = await getArticle(params.slug);
-  return {
-    title: a?.meta_title || a?.title || 'Blog – vedasach',
-    description: a?.meta_description || a?.excerpt || 'vedasach blog article.',
-    keywords: a?.meta_keywords?.join(', '),
-    openGraph: { title: a?.meta_title || a?.title, description: a?.meta_description || a?.excerpt, images: a?.og_image || a?.image_url ? [{ url: (a?.og_image || a?.image_url)! }] : undefined },
-    twitter: { card: 'summary_large_image', title: a?.meta_title || a?.title },
-  };
+  return articleMetadata(params.slug, 'blog', 'Blog', a);
 }
 
-export default function BlogArticlePage({ params }: Props) {
-  return <ArticleDetailLayout slug={params.slug} categorySlug="blog" categoryLabel="Blog" />;
+export default async function BlogArticlePage({ params }: Props) {
+  const a = await getArticle(params.slug);
+  const jsonLd = articleJsonLd(params.slug, 'blog', a);
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <ArticleDetailLayout slug={params.slug} categorySlug="blog" categoryLabel="Blog" />
+    </>
+  );
 }
