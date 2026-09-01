@@ -343,7 +343,7 @@ export default function ArticleDetailLayout({ slug, categorySlug, categoryLabel,
             {article.image_url && (
               <div className="mb-6 overflow-hidden">
                 <img src={article.image_url} alt={displayTitle} className="w-full h-64 md:h-96 object-cover" />
-                <p className="text-[10px] text-[#AAA] font-body mt-1">{categoryLabel} | VedaWell</p>
+                <p className="text-[10px] text-[#AAA] font-body mt-1">{categoryLabel} | VedaSach</p>
               </div>
             )}
 
