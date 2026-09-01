@@ -40,6 +40,11 @@ interface Article {
   meta_title: string | null;
   meta_description: string | null;
   meta_keywords: string[];
+  og_image: string | null;
+  canonical_url: string | null;
+  last_updated: string | null;
+  noindex: boolean | null;
+  faq: Array<{ question: string; answer: string }> | null;
 }
 
 interface ArticleDetailLayoutProps {
@@ -164,7 +169,34 @@ export default function ArticleDetailLayout({ slug, categorySlug, categoryLabel,
     }
   }, [article?.id]);
 
-  const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
+  const SITE_URL = 'https://www.vedasach.com';
+  const shareUrl = article?.canonical_url
+    || (typeof window !== 'undefined' ? window.location.href : `${SITE_URL}/${categorySlug}/${slug}`);
+
+  // Language-aware share text: use Hindi meta/title/excerpt when lang is 'hi' and Hindi content exists
+  const articleLang: 'hi' | 'en' = lang === 'hi' && article?.title_hi ? 'hi' : 'en';
+  const shareTitle = articleLang === 'hi'
+    ? (article?.meta_title && article.meta_title.includes(' ') ? article.meta_title : (article?.title_hi || article?.title || ''))
+    : (article?.meta_title || article?.title || '');
+  const shareDescription = articleLang === 'hi'
+    ? (article?.meta_description || article?.excerpt_hi || article?.excerpt || '')
+    : (article?.meta_description || article?.excerpt || '');
+  const shareImage = article?.og_image || article?.image_url || '';
+  const shareTags = article?.tags && article.tags.length > 0 ? article.tags : [];
+
+  const buildShareText = (platform: string): string => {
+    const tagsStr = shareTags.length > 0 ? '\n' + shareTags.map((t) => `#${t.replace(/\s+/g, '')}`).join(' ') : '';
+    if (platform === 'twitter') {
+      // Twitter: title + short desc + tags (keep under 280)
+      const desc = shareDescription.length > 100 ? shareDescription.slice(0, 97) + '...' : shareDescription;
+      return `${shareTitle}\n${desc}${tagsStr}`;
+    }
+    if (platform === 'whatsapp') {
+      return `${shareTitle}\n\n${shareDescription}${tagsStr}\n\n${shareUrl}`;
+    }
+    // Facebook uses the URL for scraping og tags; text param is a fallback hint
+    return shareTitle;
+  };
 
   const doShare = async (platform: string) => {
     await handleShare();
@@ -174,10 +206,11 @@ export default function ArticleDetailLayout({ slug, categorySlug, categoryLabel,
       setTimeout(() => setShareToast(''), 2500);
       return;
     }
+    const shareText = buildShareText(platform);
     const urls: Record<string, string> = {
-      facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`,
-      twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(displayTitle)}`,
-      whatsapp: `https://wa.me/?text=${encodeURIComponent(displayTitle + ' ' + shareUrl)}`,
+      facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(shareText)}`,
+      twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`,
+      whatsapp: `https://wa.me/?text=${encodeURIComponent(shareText)}`,
     };
     if (urls[platform]) window.open(urls[platform], '_blank', 'noopener,noreferrer,width=600,height=400');
   };
@@ -270,13 +303,13 @@ export default function ArticleDetailLayout({ slug, categorySlug, categoryLabel,
                 <div className="flex items-center gap-2">
                   <span className="text-[11px] text-[#999] font-body">{lang === 'hi' ? 'शेयर करें:' : 'Share:'}</span>
                   {[
-                    { id: 'facebook', label: 'Facebook', color: 'hover:bg-blue-600 hover:text-white hover:border-blue-600' },
-                    { id: 'twitter', label: 'Twitter', color: 'hover:bg-sky-500 hover:text-white hover:border-sky-500' },
-                    { id: 'whatsapp', label: 'WhatsApp', color: 'hover:bg-green-500 hover:text-white hover:border-green-500' },
-                    { id: 'copy', label: lang === 'hi' ? 'कॉपी' : 'Copy', color: 'hover:bg-[#111] hover:text-white hover:border-[#111]' },
+                    { id: 'facebook', label: 'Facebook', icon: <Facebook size={9} />, color: 'hover:bg-blue-600 hover:text-white hover:border-blue-600' },
+                    { id: 'twitter', label: 'Twitter', icon: <Twitter size={9} />, color: 'hover:bg-sky-500 hover:text-white hover:border-sky-500' },
+                    { id: 'whatsapp', label: 'WhatsApp', icon: <Share2 size={9} />, color: 'hover:bg-green-500 hover:text-white hover:border-green-500' },
+                    { id: 'copy', label: lang === 'hi' ? 'कॉपी' : 'Copy', icon: <Share2 size={9} />, color: 'hover:bg-[#111] hover:text-white hover:border-[#111]' },
                   ].map((s) => (
                     <button key={s.id} onClick={() => doShare(s.id)} className={`flex items-center gap-1 px-3 py-1 text-[10px] font-semibold border border-[#E8E8E8] text-[#555] transition-all font-body ${s.color}`}>
-                      <Share2 size={9} />{s.label}
+                      {s.icon}{s.label}
                     </button>
                   ))}
                 </div>
@@ -310,7 +343,7 @@ export default function ArticleDetailLayout({ slug, categorySlug, categoryLabel,
             {article.image_url && (
               <div className="mb-6 overflow-hidden">
                 <img src={article.image_url} alt={displayTitle} className="w-full h-64 md:h-96 object-cover" />
-                <p className="text-[10px] text-[#AAA] font-body mt-1">{categoryLabel} | vedasach</p>
+                <p className="text-[10px] text-[#AAA] font-body mt-1">{categoryLabel} | VedaWell</p>
               </div>
             )}
 
@@ -336,12 +369,17 @@ export default function ArticleDetailLayout({ slug, categorySlug, categoryLabel,
 
             {/* Tags */}
             {article.tags && article.tags.length > 0 && (
-              <div className="flex flex-wrap gap-2 mb-8">
-                {article.tags.map((tag) => (
-                  <Link key={tag} href={`/search?q=${encodeURIComponent(tag)}`} className="flex items-center gap-1 px-3 py-1 border border-[#E8E8E8] text-xs text-[#555] hover:border-brand hover:text-brand transition-all font-body">
-                    <Tag size={10} />{tag}
-                  </Link>
-                ))}
+              <div className="mb-8">
+                <div className="text-[10px] font-bold uppercase tracking-wider text-[#999] font-body mb-2">
+                  {lang === 'hi' ? 'टैग्स:' : 'Tags:'}
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {article.tags.map((tag) => (
+                    <Link key={tag} href={`/search?q=${encodeURIComponent(tag)}`} className="flex items-center gap-1 px-3 py-1 border border-[#E8E8E8] text-xs text-[#555] hover:border-brand hover:text-brand transition-all font-body">
+                      <Tag size={10} />{tag}
+                    </Link>
+                  ))}
+                </div>
               </div>
             )}
 
@@ -355,7 +393,7 @@ export default function ArticleDetailLayout({ slug, categorySlug, categoryLabel,
               <div>
                 <div className="text-[10px] font-semibold uppercase tracking-wider text-brand font-body mb-0.5">{lang === 'hi' ? 'द्वारा लिखित' : 'Written by'}</div>
                 <h4 className="font-display text-base font-bold text-[#111]">{article.author}</h4>
-                <p className="text-xs text-[#666] font-body mt-1">{lang === 'hi' ? 'वेदसच संपादकीय टीम अपने-अपने क्षेत्रों के विशेषज्ञों का एक ऐसा समूह है, जो प्रामाणिक स्वास्थ्य ज्ञान के माध्यम से समुदाय को सशक्त बनाने और उनका मार्गदर्शन करने के लिए एक साथ आया है।' : 'The VedaSach Editorial Team is a collective of field experts who have joined forces to empower and support our community through authentic wellness knowledge.'}</p>
+                <p className="text-xs text-[#666] font-body mt-1">{lang === 'hi' ? 'आयुर्वेद, प्राकृतिक स्वास्थ्य और समग्र जीवन में गहरे ज्ञान के साथ विशेषज्ञ वेलनेस लेखक।' : 'Expert wellness writer and researcher with deep knowledge in Ayurveda, natural health, and holistic living.'}</p>
               </div>
             </div>
 

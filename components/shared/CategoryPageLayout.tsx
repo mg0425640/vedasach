@@ -62,7 +62,7 @@ const SLUG_TO_CATEGORY: Record<string, string> = {
   education: 'Education',
 };
 
-const PER_PAGE_OPTIONS = [10, 20, 30];
+const PER_PAGE_OPTIONS = [12, 24, 36];
 const SORT_OPTIONS = [
   { value: 'recent', label: 'Most Recent', label_hi: 'सबसे हाल का', icon: Clock },
   { value: 'popular', label: 'Most Popular', label_hi: 'सबसे लोकप्रिय', icon: TrendingUp },
@@ -75,7 +75,7 @@ export default function CategoryPageLayout({ title, title_hi, description, descr
   const [subcategories, setSubcategories] = useState<{ name: string; name_hi: string | null; count: number }[]>([]);
   const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
   const [page, setPage] = useState(1);
-  const [perPage, setPerPage] = useState(10);
+  const [perPage, setPerPage] = useState(12);
   const [sortBy, setSortBy] = useState('recent');
   const [totalPages, setTotalPages] = useState(1);
   const [totalCount, setTotalCount] = useState(0);
@@ -176,7 +176,7 @@ export default function CategoryPageLayout({ title, title_hi, description, descr
           <div className="flex flex-wrap gap-2 mb-6 pb-6 border-b border-[#E8E8E8]">
             <button
               onClick={() => setSelectedSubcategory(null)}
-              className={`px-4 py-2 text-xs font-semibold font-body transition-all ${!selectedSubcategory ? 'bg-brand text-white' : 'bg-[#F8F8F8] border border-[#E8E8E8] text-[#333] hover:border-brand hover:text-brand'}`}
+              className={`px-4 py-2 text-xs font-semibold font-body transition-all ${!selectedSubcategory ? 'bg-brand text-brand border border-brand' : 'bg-[#F8F8F8] border border-[#E8E8E8] text-[#333] hover:border-brand hover:text-brand'}`}
             >
               {lang === 'hi' ? 'सभी' : 'All'}
             </button>
@@ -184,10 +184,10 @@ export default function CategoryPageLayout({ title, title_hi, description, descr
               <button
                 key={sub.name}
                 onClick={() => setSelectedSubcategory(sub.name)}
-                className={`flex items-center gap-1.5 px-4 py-2 text-xs font-semibold font-body transition-all ${selectedSubcategory === sub.name ? 'bg-brand text-white' : 'bg-[#F8F8F8] border border-[#E8E8E8] text-[#333] hover:border-brand hover:text-brand'}`}
+                className={`flex items-center gap-1.5 px-4 py-2 text-xs font-semibold font-body transition-all ${selectedSubcategory === sub.name ? 'bg-brand text-brand border border-brand' : 'bg-[#F8F8F8] border border-[#E8E8E8] text-[#333] hover:border-brand hover:text-brand'}`}
               >
                 {lang === 'hi' && sub.name_hi ? sub.name_hi : sub.name}
-                <span className={`${selectedSubcategory === sub.name ? 'text-white/60' : 'text-[#AAA]'}`}>({sub.count})</span>
+                <span className={`${selectedSubcategory === sub.name ? 'text-brand' : 'text-[#AAA]'}`}>({sub.count})</span>
               </button>
             ))}
           </div>
@@ -203,7 +203,7 @@ export default function CategoryPageLayout({ title, title_hi, description, descr
                 <button
                   key={opt.value}
                   onClick={() => setSortBy(opt.value)}
-                  className={`flex items-center gap-1 px-3 py-1.5 text-[11px] font-semibold font-body transition-all ${sortBy === opt.value ? 'bg-[#111] text-white' : 'bg-[#F8F8F8] border border-[#E8E8E8] text-[#333] hover:border-[#111]'}`}
+                  className={`flex items-center gap-1 px-3 py-1.5 text-[11px] font-semibold font-body transition-all ${sortBy === opt.value ? 'bg-[#111] text-brand' : 'bg-[#F8F8F8] border border-[#E8E8E8] text-[#333] hover:border-[#111]'}`}
                 >
                   <Icon size={11} />{lang === 'hi' ? opt.label_hi : opt.label}
                 </button>
@@ -216,7 +216,7 @@ export default function CategoryPageLayout({ title, title_hi, description, descr
               <button
                 key={n}
                 onClick={() => setPerPage(n)}
-                className={`px-3 py-1.5 text-[11px] font-semibold font-body transition-all ${perPage === n ? 'bg-brand text-white' : 'bg-[#F8F8F8] border border-[#E8E8E8] text-[#333] hover:border-brand'}`}
+                className={`px-3 py-1.5 text-[11px] font-semibold font-body transition-all ${perPage === n ? 'bg-brand text-brand' : 'bg-[#F8F8F8] border border-[#E8E8E8] text-[#333] hover:border-brand'}`}
               >
                 {n}
               </button>
@@ -294,7 +294,7 @@ export default function CategoryPageLayout({ title, title_hi, description, descr
                         <button
                           key={pageNum}
                           onClick={() => setPage(pageNum)}
-                          className={`w-8 h-8 flex items-center justify-center text-xs font-semibold font-body ${pageNum === page ? 'bg-brand text-white' : 'border border-[#E8E8E8] hover:border-brand hover:text-brand'}`}
+                          className={`w-8 h-8 flex items-center justify-center text-xs font-semibold font-body ${pageNum === page ? 'bg-brand text-primary' : 'border border-[#E8E8E8] hover:border-brand hover:text-brand'}`}
                         >
                           {pageNum}
                         </button>

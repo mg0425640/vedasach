@@ -128,18 +128,25 @@ export default function HomeContent({
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
 
       {/* Hero Section */}
-      <section className="bg-[#F8F8F8] border-b border-[#E8E8E8]">
-        <div className="max-w-7xl mx-auto px-4 py-12 md:py-16">
+<section 
+        className="relative bg-cover bg-center bg-no-repeat border-b border-[#E8E8E8]"
+        style={{ backgroundImage: `url('/Hero-BG.jpg')` }}
+      >
+        {/* Optional overlay to keep text clear and readable over the background image */}
+        <div className="absolute inset-0 bg-white/85 backdrop-blur-[0px]" />
+
+        {/* Content container must be relative so it sits on top of the overlay */}
+        <div className="relative max-w-7xl mx-auto px-4 py-12 md:py-16">
           <div className="text-center max-w-3xl mx-auto mb-8">
             <span className="tag-pill mb-4 inline-block">{hi ? 'भारत का #1 वेलनेस प्लेटफ़ॉर्म' : "India's #1 Wellness Platform"}</span>
-            <h1 className="font-display text-3xl md:text-5xl font-bold text-[#111] leading-tight mb-4">
+            <h1 className="font-display text-3xl md:text-5xl font-bold text-white leading-tight mb-4">
               {hi ? (
                 <>स्वस्थ मन।<br className="hidden md:block" /> स्वस्थ शरीर। सकारात्मक जीवन।</>
               ) : (
                 <>Healthy Mind.<br className="hidden md:block" /> Healthy Body. Positive Life.</>
               )}
             </h1>
-            <p className="text-[#666] text-base md:text-lg font-body leading-relaxed">
+            <p className="text-white/60 text-base md:text-lg font-body leading-relaxed">
               {hi
                 ? 'स्वप्न अर्थ, आयुर्वेदिक ज्ञान, योग, घरेलू उपाय, सौंदर्य युक्तियां और प्राकृतिक स्वास्थ्य समाधान खोजें।'
                 : 'Discover dream meanings, Ayurvedic wisdom, yoga, home remedies, beauty tips, and natural health solutions.'}
@@ -257,23 +264,23 @@ export default function HomeContent({
       </section>
 
       {/* Ayurveda Herbs */}
-      <section className="bg-[#F8F8F8] border-y border-[#E8E8E8] py-10">
+      <section className="bg-[#93C572] border-y border-[#E8E8E8] py-10">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between mb-6">
             <div className="divider-title flex-1">
-              <h2 className="text-sm font-bold uppercase tracking-widest">🌿 {hi ? 'आयुर्वेदिक जड़ी-बूटियां' : 'Ayurvedic Herbs'}</h2>
+              <h2 className="text-sm text-brand font-bold uppercase tracking-widest">🌿 {hi ? 'आयुर्वेदिक जड़ी-बूटियां' : 'Ayurvedic Herbs'}</h2>
             </div>
             <Link href="/ayurveda" className="text-xs font-semibold text-brand uppercase tracking-wider hover:underline ml-4 whitespace-nowrap">{hi ? 'सभी देखें →' : 'View All →'}</Link>
           </div>
           <div className="grid grid-cols-4 sm:grid-cols-8 gap-4">
             {AYURVEDA_HERBS.map((herb) => (
               <Link key={herb.slug} href={`/ayurveda/${herb.slug}`} className="group flex flex-col items-center text-center gap-2">
-                <div className="w-full aspect-square overflow-hidden rounded-full bg-[#EEE]">
+                <div className="w-full aspect-square overflow-hidden rounded-full bg-[#EEE] border border-white flex items-center justify-center">
                   <img src={herb.image} alt={herb.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <div>
-                  <p className="text-[12px] font-bold font-body text-[#111] group-hover:text-brand transition-colors">{herb.name}</p>
-                  <p className="text-[11px] text-[#999] font-body">{hi ? herb.benefit_hi : herb.benefit}</p>
+                  <p className="text-[12px] font-bold font-body text-white group-hover:text-brand transition-colors">{herb.name}</p>
+                  <p className="text-[11px] text-white/80 font-body">{hi ? herb.benefit_hi : herb.benefit}</p>
                 </div>
               </Link>
             ))}
