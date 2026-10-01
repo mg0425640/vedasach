@@ -152,19 +152,19 @@ export default function Sidebar() {
 
       {/* 1. SOCIAL MEDIA WIDGET */}
       <div className="grid grid-cols-3 gap-1 bg-[#FAF9F9] p-3 text-center border border-[#F0F0F0]">
-        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center py-3 hover:bg-white transition-colors">
+        <a href="https://www.facebook.com/profile.php?id=61593517601599" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center py-3 hover:bg-white transition-colors">
           <Facebook size={20} className="text-[#1877F2] mb-1" />
           <span className="text-xs font-semibold text-[#333] font-body lowercase">facebook</span>
           <span className="text-[11px] text-[#A0A0A0] font-body mt-0.5">{t.fbFollowers}</span>
         </a>
 
-        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center py-3 hover:bg-white transition-colors border-x border-[#F0F0F0]">
+        <a href="https://x.com/Vedasach" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center py-3 hover:bg-white transition-colors border-x border-[#F0F0F0]">
           <Twitter size={20} className="text-[#1DA1F2] mb-1" />
           <span className="text-xs font-semibold text-[#333] font-body lowercase">twitter</span>
           <span className="text-[11px] text-[#A0A0A0] font-body mt-0.5">{t.twFollowers}</span>
         </a>
 
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center py-3 hover:bg-white transition-colors">
+        <a href="https://www.instagram.com/vedasachhi/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center py-3 hover:bg-white transition-colors">
           <Instagram size={20} className="text-[#E4405F] mb-1" />
           <span className="text-xs font-semibold text-[#333] font-body lowercase">instagram</span>
           <span className="text-[11px] text-[#A0A0A0] font-body mt-0.5">{t.igFollowers}</span>

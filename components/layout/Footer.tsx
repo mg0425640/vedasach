@@ -135,10 +135,10 @@ export default function Footer() {
             <p className="text-white text-sm leading-relaxed mb-4">{t.brandDesc}</p>
             <div className="flex items-center gap-3 text-white hover:text-brand transition-colors">
               {[
-                { Icon: Facebook, href: '#' },
-                { Icon: Instagram, href: '#' },
-                { Icon: Youtube, href: '#' },
-                { Icon: Twitter, href: '#' },
+                { Icon: Facebook, href: 'https://www.facebook.com/profile.php?id=61593517601599' },
+                { Icon: Instagram, href: 'https://www.instagram.com/vedasachhi/' },
+                { Icon: Youtube, href: 'https://www.youtube.com/channel/UCwZTW7qy4MfwamQry_c8RTQ' },
+                { Icon: Twitter, href: 'https://x.com/Vedasach' },
               ].map(({ Icon, href }, i) => (
                 <a key={i} href={href} className="w-8 h-8 bg-[#222] flex items-center justify-center hover:bg-brand transition-colors">
                   <Icon size={14} />
